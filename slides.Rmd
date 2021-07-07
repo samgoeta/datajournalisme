@@ -419,6 +419,20 @@ Workbench propose de nombreux outils de traitement et de visualisation des donn�
 ]
 
 ---
+### 5 intentions dans l'analyse de données 
+
+* Description (“**que** nous disent ces données ?”)
+
+* Comparaison (“**comment** sont ces données par rapport à d’autres données ?”)
+
+* Explication (“**pourquoi** ces données sont comme elles sont ?”)
+
+* Prédiction (“comment seraient ces données **si**...?”)
+
+* Suggestion (“que devrais-je savoir **d’autre ?**”)
+
+.footnote[Source : Patrick Marcel, 2021, [Action MADONA, premiers résultats](https://drive.google.com/file/d/1cgvW82RusC_H0t33Oql6Aamvio239DNR/view)]
+---
 
 ### Présenter
 

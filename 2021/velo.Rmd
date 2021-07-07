@@ -12,31 +12,18 @@ library(sf)
 library(archive)
 
 ```
-import contour iris 
+
+import data
 ```{r}
-#contour iris 13 (source ODS : https://data.opendatasoft.com/explore/dataset/georef-france-iris%40public/)
+vel <- st_read(dsn = "etat-des-stations-jc-decaux (1).geojson")
 
-contour_iris <- st_read(dsn = "https://data.opendatasoft.com/explore/dataset/georef-france-iris@public/download/?format=geojson&disjunctive.reg_name=true&disjunctive.dep_name=true&disjunctive.arrdep_name=true&disjunctive.ze2020_name=true&disjunctive.bv2012_name=true&disjunctive.epci_name=true&disjunctive.ept_name=true&disjunctive.com_name=true&disjunctive.com_arm_name=true&disjunctive.iris_name=true&refine.dep_name=Bouches-du-Rh%C3%B4ne&timezone=Europe/Berlin&lang=fr")
+names(vel)
 
+vel2 <- vel[,-15]
 
-names(contour_iris)
+vel %>% 
+  write_sf("vel.geojson")
+
 ```
 
-
-import sections
-```{r}
-
-sections_cadastres_13 <- st_read(dsn = "https://cadastre.data.gouv.fr/bundler/cadastre-etalab/departements/13/geojson/sections/")
-names(sections_cadastres_13)
-```
-
-correspondance iris / parcelles 
-
-```{r}
-sections_cadastres_13_join_iris <- sections_cadastres_13 %>% 
-  st_join(contour_iris)
-
-write_sf(sections_cadastres_13_join_iris, "sections_cadastres_13_join_iris.csv")
-
-```
 
